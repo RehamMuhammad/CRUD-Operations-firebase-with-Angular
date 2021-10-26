@@ -1,5 +1,8 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": "5a9a11ff-a83b-4e36-92d9-22f6cef56fa0"
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
@@ -27,9 +30,12 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.css",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -97,6 +103,16 @@
               "src/styles.css"
             ],
             "scripts": []
+          }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "firebase-with-angular:build:production",
+            "firebaseProject": "angular-firebase-176a2",
+            "firebaseHostingSite": "angular-firebase-176a2"
           }
         }
       }

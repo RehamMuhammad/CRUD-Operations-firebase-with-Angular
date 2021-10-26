@@ -1,0 +1,15 @@
+    <ul  *ngFor="let product of products">
+      <h1 class="table-warning" > Title: {{product.title}}</h1> 
+      <h2 > Category: {{product.category}}</h2 > 
+      <h3 >Price: {{product.price}}</h3> 
+      <h3 >Quantity: {{product.quantity}}</h3> 
+      <h4 >Description: {{product.description}}</h4> <hr/>
+
+    </ul>
+
+    <button (click)="addProduct()">Add new Product</button>
+    <button (click)="updateProduct()">Update the Product</button>
+    <button (click)="deleteProduct()">Delete the Product</button>
+
+
+
